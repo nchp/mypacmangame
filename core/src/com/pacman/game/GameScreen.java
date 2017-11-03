@@ -9,16 +9,16 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class GameScreen extends ScreenAdapter {
     private PacmanGame pacmanGame;
-    private Texture pacmanImg;
     
-    private int x;
-    private int y;
+    private Texture pacmanImg;
+    private Pacman pacman;
+    // private int x;
+    // private int y;
     
     public GameScreen(PacmanGame pacmanGame) {
         this.pacmanGame = pacmanGame;
         pacmanImg = new Texture("pacman.png");
-        x = 100;
-        y = 100;
+	    pacman = new Pacman(100,100);
     }
     
     @Override
