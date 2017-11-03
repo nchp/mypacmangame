@@ -16,10 +16,15 @@ public class GameScreen extends ScreenAdapter {
     // private int x;
     // private int y;
     
+    World world;
+    
     public GameScreen(PacmanGame pacmanGame) {
         this.pacmanGame = pacmanGame;
         pacmanImg = new Texture("pacman.png");
-	    pacman = new Pacman(100,100);
+	    // pacman = new Pacman(100,100);
+        
+        world = new World(pacmanGame);
+        pacman = world.getPacman();
     }
     
     @Override
